@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.getElementById("navLinks");
 
     function toggleMenu() {
+        if (!menuBtn || !navLinks) return;
+
         navLinks.classList.toggle("active");
 
         const isOpen = navLinks.classList.contains("active");
@@ -20,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function closeMenu() {
+        if (!menuBtn || !navLinks) return;
+
         navLinks.classList.remove("active");
         menuBtn.textContent = "☰";
         menuBtn.setAttribute("aria-expanded", "false");
@@ -29,12 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         menuBtn.addEventListener("click", toggleMenu);
 
-        // Close menu after clicking a link
         navLinks.querySelectorAll("a").forEach(function (link) {
             link.addEventListener("click", closeMenu);
         });
 
-        // Close menu when clicking outside
         document.addEventListener("click", function (event) {
             if (
                 navLinks.classList.contains("active") &&
@@ -45,13 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Close menu with Escape key
         document.addEventListener("keydown", function (event) {
             if (event.key === "Escape") {
                 closeMenu();
             }
         });
-
     }
 
     // SMOOTH SCROLL
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const targetId = this.getAttribute("href");
 
-            if (targetId === "#") return;
+            if (!targetId || targetId === "#") return;
 
             const target = document.querySelector(targetId);
 
@@ -73,9 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     block: "start"
                 });
             }
-
         });
-
     });
 
     // FOOTER YEAR
@@ -86,17 +84,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // DOWNLOAD BUTTON
-    const downloadButton = document.querySelector(".download .btn");
-
-    if (downloadButton) {
-
-        downloadButton.addEventListener("click", function () {
-
-            console.log("MezziAI APK download requested.");
-
-        });
-
-    }
+    // Download is handled directly by the HTML link.
+    // No JavaScript interception is needed.
 
     console.log("MezziAI Website Loaded Successfully.");
 
