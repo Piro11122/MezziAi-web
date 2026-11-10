@@ -5,8 +5,59 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#09090d">
-<meta name="description" content="MezziAI - Your AI. Your Universe. Discover a new world of artificial intelligence.">
-<title>MezziAI — Your AI Universe</title>
+
+<title>Amen Mezzi — Founder of MezziAI | Official Website</title>
+
+<meta name="description" content="Official website of Amen Mezzi, creator and founder of MezziAI. Discover his technology projects, interests in artificial intelligence and MezziAI Android application.">
+
+<meta name="author" content="Amen Mezzi">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="Amen Mezzi, MezziAI, Amen Mezzi developer, MezziAI creator, Tunisian developer">
+
+<link rel="canonical" href="https://piro11122.github.io/MezziAi-web/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Amen Mezzi — Creator of MezziAI">
+<meta property="og:description" content="Discover Amen Mezzi and MezziAI, an artificial intelligence project.">
+<meta property="og:url" content="https://piro11122.github.io/MezziAi-web/">
+<meta property="og:site_name" content="Amen Mezzi">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Amen Mezzi — MezziAI">
+<meta name="twitter:description" content="Official website of Amen Mezzi, creator of MezziAI.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://piro11122.github.io/MezziAi-web/#person",
+      "name": "Amen Mezzi",
+      "url": "https://piro11122.github.io/MezziAi-web/",
+      "jobTitle": "Independent Developer",
+      "description": "Amen Mezzi is a Tunisian aspiring developer interested in programming, artificial intelligence and technology. He is the creator of MezziAI.",
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Software Development",
+        "Programming",
+        "Technology"
+      ],
+      "sameAs": []
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "MezziAI",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Android",
+      "author": {
+        "@id": "https://piro11122.github.io/MezziAi-web/#person"
+      },
+      "url": "https://piro11122.github.io/MezziAi-web/"
+    }
+  ]
+}
+</script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
@@ -28,6 +79,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -47,8 +99,6 @@ a {
     max-width: 1150px;
     margin: auto;
 }
-
-/* NAVBAR */
 
 header {
     position: fixed;
@@ -109,8 +159,6 @@ nav {
     font-size: 27px;
     cursor: pointer;
 }
-
-/* HERO */
 
 .hero {
     min-height: 760px;
@@ -244,8 +292,6 @@ nav {
     font-size: 22px;
 }
 
-/* SECTIONS */
-
 section {
     padding: 100px 0;
 }
@@ -309,8 +355,6 @@ section {
     color: var(--muted);
 }
 
-/* ABOUT */
-
 .about-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -343,7 +387,84 @@ section {
     font-size: 75px;
 }
 
-/* DOWNLOAD */
+/* CREATOR SECTION */
+
+.creator {
+    position: relative;
+    overflow: hidden;
+}
+
+.creator-card {
+    position: relative;
+    padding: 55px;
+    border-radius: 24px;
+    background: linear-gradient(135deg,#191323,#101017);
+    border: 1px solid #a477ff30;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.creator-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg,#a477ff,#46217e);
+    box-shadow: 0 0 70px #9b6cff45;
+    font-size: 55px;
+    font-weight: 900;
+    color: white;
+}
+
+.creator-info h2 {
+    font-size: clamp(30px,5vw,43px);
+    letter-spacing: -2px;
+    margin-bottom: 10px;
+}
+
+.creator-role {
+    color: var(--light);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.creator-info p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 2;
+    max-width: 650px;
+}
+
+.creator-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.creator-link {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 1px solid #ffffff20;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.creator-link:hover {
+    background: var(--purple);
+    border-color: var(--purple);
+}
+
+.creator-project {
+    margin-top: 22px;
+    color: var(--light);
+    font-size: 12px;
+}
 
 .download {
     text-align: center;
@@ -361,8 +482,6 @@ section {
     line-height: 1.8;
 }
 
-/* FOOTER */
-
 footer {
     border-top: 1px solid #ffffff12;
     padding: 35px 0;
@@ -376,7 +495,13 @@ footer .logo {
     margin-bottom: 15px;
 }
 
-/* MOBILE */
+.footer-creator {
+    margin-top: 12px;
+}
+
+.footer-creator a {
+    color: var(--light);
+}
 
 @media(max-width:750px) {
     .menu-btn {
@@ -432,6 +557,24 @@ footer .logo {
         font-size: 30px;
     }
 
+    .creator-card {
+        grid-template-columns: 1fr;
+        padding: 30px 22px;
+        text-align: center;
+        justify-items: center;
+        gap: 25px;
+    }
+
+    .creator-avatar {
+        width: 125px;
+        height: 125px;
+        font-size: 42px;
+    }
+
+    .creator-links {
+        justify-content: center;
+    }
+
     section {
         padding: 75px 0;
     }
@@ -456,6 +599,7 @@ footer .logo {
                 <a href="#home" onclick="closeMenu()">Home</a>
                 <a href="#features" onclick="closeMenu()">Features</a>
                 <a href="#about" onclick="closeMenu()">About</a>
+                <a href="#creator" onclick="closeMenu()">Creator</a>
                 <a href="#download" class="nav-button" onclick="closeMenu()">Download App</a>
             </div>
         </nav>
@@ -570,6 +714,68 @@ footer .logo {
     </div>
 </section>
 
+<!-- CREATOR SECTION -->
+
+<section class="creator" id="creator">
+    <div class="container">
+
+        <div class="section-title">
+            <span class="tag">THE PERSON BEHIND THE PROJECT</span>
+            <h2>Meet the <span class="gradient">Creator.</span></h2>
+            <p>Discover the person behind MezziAI.</p>
+        </div>
+
+        <div class="creator-card">
+
+            <div class="creator-avatar" aria-label="Amen Mezzi initials">
+                AM
+            </div>
+
+            <div class="creator-info">
+
+                <h2>Amen <span class="gradient">Mezzi.</span></h2>
+
+                <div class="creator-role">
+                    Founder & Creator of MezziAI
+                </div>
+
+                <p>
+                    Amen Mezzi is a Tunisian aspiring developer
+                    interested in programming, artificial intelligence
+                    and modern technology.
+
+                    He is the creator of MezziAI, an independent
+                    project focused on bringing AI-powered experiences
+                    together in one accessible platform.
+
+                    His interests include software development,
+                    AI integration and building digital projects.
+                </p>
+
+                <div class="creator-project">
+                    ✦ Creator of MezziAI · Tunisia
+                </div>
+
+                <div class="creator-links">
+                    <a class="creator-link"
+                       href="https://github.com/piro11122"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                       GitHub ↗
+                    </a>
+
+                    <a class="creator-link"
+                       href="#about">
+                       Explore MezziAI
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
 <section class="download" id="download">
     <div class="container">
 
@@ -602,8 +808,17 @@ footer .logo {
 <footer>
     <div class="container">
         <div class="logo">Mezzi<span style="color:#9b6cff">AI</span></div>
+
         <p>© 2026 MezziAI. All rights reserved.</p>
-        <p style="margin-top:10px">Your AI. Your Universe.</p>
+
+        <p style="margin-top:10px">
+            Your AI. Your Universe.
+        </p>
+
+        <p class="footer-creator">
+            Created by
+            <a href="#creator">Amen Mezzi</a>
+        </p>
     </div>
 </footer>
 
