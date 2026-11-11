@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "latest": "1.0.0",
+  "releases": [
+    {
+      "version": "1.0.0",
+      "date": "",
+      "channel": "stable",
+      "minAndroid": "",
+      "sizeBytes": 1446673,
+      "sha256": "",
+      "downloadUrl": "https://piro11122.github.io/MezziAi-web/signed_MezziAI.apk",
+      "notes": [
+        "Initial release of MezziAI",
+        "First stable version"
+      ]
+    }
+  ]
+}
